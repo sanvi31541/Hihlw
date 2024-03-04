@@ -3,12 +3,12 @@ const fs = require('fs');
 const axios = require('axios');
 
 module.exports.config = {
-  name: "tools",
+  name: "meta",
   version: "2.0.0",
   permission: 0,
   credits: "BADOL-KHAN",
   description: "Ai, tiktokdl, Cupcut, Tiksearch, shoti, remini", commandCategory: "tools",
-  prefix: false,
+  prefix: true,
   category: "admin",
   usages: "ai [ your question ]\n tiktokdl [ tiktok link ]\nCupcut [ cupcut template link ]\nTiksearch [ title ]\n shoti [ simple type ]\nRemini [ reply a photo ]",
   cooldowns: 5,
