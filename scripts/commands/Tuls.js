@@ -3,7 +3,7 @@ const fs = require('fs');
 const axios = require('axios');
 
 module.exports.config = {
-  name: "meta",
+  name: "tools",
   version: "2.0.0",
   permission: 0,
   credits: "BADOL-KHAN",
@@ -25,7 +25,7 @@ if (args.length === 0)
 
  try {
 	 if (args[0] === "list") {
-		api.sendMessage(`List of available tools:\n1 tiksearch\n2 tiktokdl\n3 cupcut\n4 shoti\n4 ai\n5 remini`, event.threadID, event.messageID);
+		api.sendMessage(`★★★▰▱▰▱▰▱▰▰▱▰▱▰▱▰▱▰▱▰★★★\n\n⚠️List of available tools 📌\n\n⚠️1 tiksearch 📌\n⚠️2 tiktokdl 📌\n⚠️3 cupcut 📌\n⚠️4 shoti 📌\n⚠️4 ai 📌\n⚠️5 remini 📌\n\n★★★▰▱▰▱▰▱▰▰▱▰▱▰▱▰▱▰▱▰★★★`, event.threadID, event.messageID);
 	 } else if (args[0] === "remini") {
  const messageReply = event.messageReply;
 
@@ -124,7 +124,7 @@ api.sendMessage(`searching please wait...`, event.threadID, event.messageID);
 		});
 	 }
  } catch (error) {
-	 api.sendMessage(`Error fetching tools!!`, event.threadID, event.messageID);
+	 api.sendMessage(`❌Error fetching tools⛔`, event.threadID, event.messageID);
 	 console.log(error);
  }
 };
