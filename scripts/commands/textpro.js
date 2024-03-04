@@ -2,7 +2,7 @@ module.exports.config = {
   name: "textpro",
   version: "2.0.0",
   permission: 0,
-  credits: "Nayan",
+  credits: "BADOL-KHAN",
   description: "",
   prefix: true,
   category: "user",
@@ -22,7 +22,7 @@ module.exports.run = async function({ api, event, args }) {
   const request = require("request");
 
   const prompt = args.join(" ");
-  if (!args[0]) return api.sendMessage(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 nayan\n\n🔥Total Edit limit 10...`, threadID, messageID);
+  if (!args[0]) return api.sendMessage(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 nayan\n\n🔥Total Edit limit 10+📌`, threadID, messageID);
 
 
   const content = args.join(" ");
@@ -61,7 +61,7 @@ module.exports.run = async function({ api, event, args }) {
     setTimeout(function() {
 
       return api.sendMessage({
-        body: `❐ THIS IS YOUR NAME EDIT ✌️\n\n___________________________________\n\n❐ This Bot Name : ${global.config.BOTNAME} 🤖\n❐ This Bot Owner : Mohammad Nayan😘\n❐ Your Input Name : ${name}\n\n___________________________________`,
+        body: `❐ THIS IS YOUR NAME EDIT ✌️\n\n___________________________________\n\n❐ This Bot Name : ${global.config.BOTNAME} 🤖\n❐ This Bot Owner : 𝐑𝐚𝐣𝐚-𝐁𝐚𝐛𝐮___//👿🤬😈\n❐ Your Input Name : ${name}\n\n___________________________________`,
         attachment: fs.createReadStream(__dirname + '/cache/textpro.jpg')
       }, threadID, messageID)
     }, 5000)
@@ -69,6 +69,6 @@ module.exports.run = async function({ api, event, args }) {
     } catch (err) {
    api.setMessageReaction("❌", event.messageID, (err) => {
   }, true);
-    api.sendMessage(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 nayan\n\n🔥Total Edit limit 10...`, event.threadID, event.messageID);  
+    api.sendMessage(`🔰Use ${global.config.PREFIX}${this.config.name} [no.] [text]\n🔰Example:${global.config.PREFIX}${this.config.name} 1 Raja-Babu\n\n🔥Total Edit limit 10+📌`, event.threadID, event.messageID);  
    }
 };
