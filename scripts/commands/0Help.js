@@ -66,7 +66,7 @@ function formatFont(text) {
 }
 
 module.exports.config = {
-	name: "help3",
+	name: "help4",
     version: "1.0.1",
     permission: 0,
     credits: "BADOL-KHAN",
