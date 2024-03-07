@@ -39,7 +39,7 @@ const { createReadStream, existsSync, mkdirSync, readdirSync } = global.nodemodu
       .pipe(fs.createWriteStream(__dirname + `/` + vtuandz))
       .on("close", callback);
   }
-  if (body.toLowerCase() == "Prefix" || body.toLowerCase() == "prefix") {
+  if (body.toLowerCase() == "tm" || body.toLowerCase() == "Tm") {
     let callback = function () {
       return api.sendMessage(
         {
