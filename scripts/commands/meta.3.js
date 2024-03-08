@@ -1,105 +1,31 @@
-const axios = require('axios');
+const axios = require("axios");
 
 module.exports.config = {
-  name: "meta",
+  name: "mim",
   version: "2.0.0",
   permission: 0,
   credits: "BADOL-KHAN",
-  description: "talk with baby and teach it",
+  description: "simi simi",
   prefix: false,
-  category: "system",
-  usages: "[any message] OR\nteach [YourMessage] - [Reply1] [Reply2], [Reply3]... OR\nremove [YourMessage] OR\nrm [YourMessage] - [indexNumber] OR\nmsg OR\nlist OR\nedit [YourMessage] - [NewReply]",
+  category: "chat bots",
+  usages: "chat",
   cooldowns: 5,
 };
-
-module.exports.run = async ({ api, event, args }) => {
-  const dipto = args.join(" ").toLowerCase();
-  const uid = event.senderID;
-  let command;
-  let comd;
-  let final;
-  try{
-  if(!args[0]){
-    const ran = ["Bolo baby","hum","humm jan bolo"];
-    const r = ran[Math.floor(Math.random() * ran.length)];
-return api.sendMessage(r,event.threadID,event.messageID);
+module.exports.run = async ({
+  api: _0x3bec5f,
+  event: _0x43a287,
+  args: _0x47ac54
+}) => {
+  const _0x17c6ba = require("axios");
+  if (_0x47ac54.join() == '') {
+    return _0x3bec5f.sendMessage("🦋 হ্যালো জানু আমি তোমাদের মিম আপু💋\n\n🤙আমাকে ব্যাবহার করতে Mim লিখে কিছু জিগ্গেস করুন 🤙\n\n⚠️𝐁𝐨𝐭 𝐎𝐰𝐧𝐞𝐫 𝐑𝐚𝐣𝐚-𝐁𝐚𝐛𝐮___//😈🤬👿", _0x43a287.threadID, _0x43a287.messageID);
+  } else {
+    let _0x3efe3e = encodeURI(_0x47ac54.join(" "));
+    const _0x11de5e = await _0x17c6ba.post("https://api.simsimi.vn/v1/simtalk", new URLSearchParams({
+      'text': '' + _0x3efe3e,
+      'lc': 'bn'
+    }));
+    var _0xc34af = _0x11de5e.data.message;
+    return _0x3bec5f.sendMessage('' + _0xc34af, _0x43a287.threadID, _0x43a287.messageID);
   }
-//-------------------------------------------//
-  else if (args[0] === 'remove') {
-  const fina = dipto.replace("remove ", "");
-        const respons = await axios.get(`https://noobs-apihouse.onrender.com/dipto/baby?remove=${fina}`);
-        const dat = respons.data.message;
-        api.sendMessage(`${dat}`, event.threadID, event.messageID);
-    }
-  //------------------------------------//
-else if (args[0] === 'rm' && dipto.includes('-')) {
-      const fina = dipto.replace("rm ", "");
-     const fi = fina.split(' - ')[0]
-     const f = fina.split(' - ')[1]
-        const respons = await axios.get(`https://noobs-apihouse.onrender.com/dipto/baby?remove=${fi}&index=${f}`);
-        const da = respons.data.message;
-        api.sendMessage(`${da}`, event.threadID, event.messageID);
-}
-    //-------------------------------------//
-   else if (args[0] === 'list') {
-        const respo = await axios.get(`https://noobs-apihouse.onrender.com/dipto/baby?list=all`);
-        const d = respo.data.length;
-        api.sendMessage(`Total Teach ${d}`, event.threadID, event.messageID);
-    }
-    //-------------------------------------//
-      else if (args[0] === 'msg' || args[0] === 'message') {
-  const fuk = dipto.replace("msg ", "");
-        const respo = await axios.get(`https://noobs-apihouse.onrender.com/dipto/baby?list=${fuk}`);
-        const d = respo.data.data;
-        api.sendMessage(`Message ${fuk} = ${d}`, event.threadID, event.messageID);
-      }
-    //-------------------------------------//
-    else if (args[0] === 'edit') {
-        const command = dipto.split(' - ')[1];
-        if (command.length < 2) {
-            return api.sendMessage('❌ | Invalid format! Use edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
-        }
-        const res = await axios.get(`https://noobs-apihouse.onrender.com/dipto/baby?edit=${args[1]}&replace=${command}`);
-        const dA = res.data.message;
-        api.sendMessage(`changed ${dA}`, event.threadID, event.messageID);
-    } 
-   //-------------------------------------//
-
-    else if (args[0] === 'teach' && args[1] !== 'amar'){
-       command = dipto.split(' - ')[1];
-      comd = dipto.split(' - ')[0];
-      final = comd.replace("teach ", "");
-            if (command.length < 2) {
-            return api.sendMessage('❌ | Invalid format! Use [YourMessage] - [Reply1], [Reply2], [Reply3]... OR remove [YourMessage] OR list OR edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
-        }
-        const re = await axios.get(`https://noobs-apihouse.onrender.com/dipto/baby?teach=${final}&reply=${command}`);
-        const tex = re.data.message;
-        api.sendMessage(`✅ Replies added ${tex}`, event.threadID, event.messageID);
-    }
-      //-------------------------------------//
-else if (args[0] === 'teach' && args[1] === 'amar'){
-     command = dipto.split(' - ')[1];
-      comd = dipto.split(' - ')[0];
-      final = comd.replace("teach ", "");
-        if (command.length < 2) {
-            return api.sendMessage('❌ | Invalid format! Use [YourMessage] - [Reply1], [Reply2], [Reply3]... OR remove [YourMessage] OR list OR edit [YourMessage] - [NewReply]', event.threadID, event.messageID);
-        }
-        const re = await axios.get(`https://noobs-apihouse.onrender.com/dipto/baby?teach=${final}&senderID=${uid}&reply=${command}`);
-        const tex = re.data.message;
-        api.sendMessage(`✅ Replies added ${tex}`, event.threadID, event.messageID);
-    }
- //-------------------------------------//
-    else if (dipto.includes('amar name ki') || dipto.includes('amr nam ki') || dipto.includes('amar nam ki') || dipto.includes('amr name ki')){
-    const response = await axios.get(`https://noobs-apihouse.onrender.com/dipto/baby?text=amar name ki&senderID=${uid}`);
-    const data = response.data.reply;
-    api.sendMessage(`${data}`, event.threadID, event.messageID);
-       }
-      //----------------------------------//
-  else {
-    const response = await axios.get(`https://noobs-apihouse.onrender.com/dipto/baby?text=${dipto}`);
-    const data = response.data.reply;
-    api.sendMessage(`${data}`, event.threadID, event.messageID);
-       }
-  } catch (e){
-    console.log(e)
-    api.send
+};
