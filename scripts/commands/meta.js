@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 module.exports.config = {
-  name: "mim",
+  name: "meta",
   version: "2.0.0",
   permission: 0,
   credits: "BADOL-KHAN",
