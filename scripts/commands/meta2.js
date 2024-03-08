@@ -11,52 +11,21 @@ module.exports.config = {
   usages: "chat",
   cooldowns: 5,
 };
-module.exports.handleReply = async function ({ api, event, handleReply }) {
- //api.unsendMessage(handleReply.messageID);
-  if (event.type == "message_reply") {
-  const reply = event.body.toLowerCase();;
-  if (isNaN(reply)) {
-    const response = await axios.get(`https://yw2tgw-3000.csb.app/dipto?text=${encodeURIComponent(reply)}`)
-       const ok = response.data.reply;
-    await api.sendMessage(ok ,event.threadID,(error, info) => {
-  global.client.handleReply.push({
-    name: this.config.name,
-    type: 'reply',
-    messageID: info.messageID,
-    author: event.senderID,
-    link: ok
-  })},event.messageID)
+module.exports.run = async ({
+  api: _0x3bec5f,
+  event: _0x43a287,
+  args: _0x47ac54
+}) => {
+  const _0x17c6ba = require("axios");
+  if (_0x47ac54.join() == '') {
+    return _0x3bec5f.sendMessage(" Hey ,আমি তোমাগো bby 😎 \n\n আমাকে ব্যাবহার করতে [Bby]লিখে কিছু জিগ্গেস করুন 🤗 \n\n🦋 𝐑𝐚𝐣𝐚-𝐁𝐚𝐛𝐮___//👿🤬😈  🌿 ", _0x43a287.threadID, _0x43a287.messageID);
+  } else {
+    let _0x3efe3e = encodeURI(_0x47ac54.join(" "));
+    const _0x11de5e = await _0x17c6ba.post("https://api.simsimi.vn/v1/simtalk", new URLSearchParams({
+      'text': '' + _0x3efe3e,
+      'lc': 'bn'
+    }));
+    var _0xc34af = _0x11de5e.data.message;
+    return _0x3bec5f.sendMessage('' + _0xc34af, _0x43a287.threadID, _0x43a287.messageID);
   }
-}
-  //----------//
-  if (event.type == "message_reply") {
-  const reply = event.body.toLowerCase();;
-  if (isNaN(reply)) {
-    const response = await axios.get(`https://yw2tgw-3000.csb.app/dipto?text=${encodeURIComponent(reply)}`)
-       const yy = response.data.reply;
-    await api.sendMessage(yy,event.threadID,event.messageID)
-  }
-  }
-}
-module.exports.run = async function ({ api, args, event }) {
-  try {
-    const dipto = args.join(" ").toLowerCase();
-    if (!args[0]) {
-      api.sendMessage(
-        "Please provide a question to answer\n\nExample:\nbaby ki koro",
-  event.threadID,  event.messageID ); return;}
-    if (dipto) {
-      const response = await axios.get(`https://yw2tgw-3000.csb.app/dipto?text=${dipto}`);
-         const mg = response.data.reply;
-      await api.sendMessage({body: mg ,},event.threadID,(error, info) => {
-  global.client.handleReply.push({
-    name: this.config.name,
-    type: 'reply',
-    messageID: info.messageID,
-    author: event.senderID,
-    link: mg
-  })},event.messageID);
-    }
-  } catch (error) {console.error(`Failed to get an answer: ${error.message}`);
-api.sendMessage(`${error.message}.\nAn error`,event.threadID,event.messageID);}
 };
