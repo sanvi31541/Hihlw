@@ -3,7 +3,7 @@ module.exports.config = {
 	version: "0.0.2",
 	permission: 0,
   prefix: true,
-	credits: "Nayan",
+	credits: "BADOL-KHAN",
 	description: "uptime",
 	category: "admin",
 	usages: "",
@@ -25,7 +25,7 @@ const time = process.uptime() ,
     var y_1 = (seconds < 10) ? '0' + seconds : seconds;
   const { commands } = global.client;
   const moment = require("moment-timezone");
-  const timeNow = moment.tz("Asia/Dhaka").format("DD/MM/YYYY || HH:mm:s");
+  const timeNow = moment.tz("Asia/Dhaka").format("DD/MM/YYYY || hh:mm:s");
     const axios = require('axios')
 	const pidusage = await global.nodemodule["pidusage"](process.pid);
 	const timeStart = Date.now();
@@ -120,8 +120,8 @@ registerFont(__dirname + `/nayan/CaviarDreams.ttf`, {
     });
     ctx.textAlign = "start";
     ctx.font = "45px time";
-    ctx.fillText("@" + "www.xnxx.com169", 250, 515)
-    ctx.fillText("@" + "MOHAMMAD-NAYAN", 250, 575)
+    ctx.fillText("@" + "𝐑𝐚𝐣𝐚-𝐁𝐚𝐛𝐮", 250, 515)
+    ctx.fillText("@" + "𝐑𝐚𝐣𝐚-𝐁𝐚𝐛𝐮", 250, 575)
    //ctx.fillText("@" + "DVFB.VietLe.pro", 405, 750)
     ctx.restore();
     ctx.save();
@@ -129,7 +129,7 @@ registerFont(__dirname + `/nayan/CaviarDreams.ttf`, {
     const imageBuffer = canvas.toBuffer();
    fs.writeFileSync(pathImg, imageBuffer);
   return api.sendMessage({
-    body: `┃======{ 𝗨𝗣𝗧𝗜𝗠𝗘 𝗥𝗢𝗕𝗢𝗧 }======┃\n\n→ Bot worked  ${hours} hours ${minutes} minutes ${seconds} seconds \n•━━━━━━━━━━━━━━━━━━━━━━━━•\n➠ 𝗠𝗢𝗛𝗔𝗠𝗠𝗔𝗗 𝗡𝗔𝗬𝗔𝗡\n➠ Bo𝐭 Name: ${global.config.BOTNAME}\n➠ Bot Prefix: ${global.config.PREFIX}\n➠ Commands count: ${commands.size}\n➠ Total Users: ${global.data.allUserID.length}\n➠ Total thread: ${global.data.allThreadID.length}\n➠ CPU in use:: ${pidusage.cpu.toFixed(1)}%\n➠ RAM: ${byte2mb(pidusage.memory)}\n➠ Ping: ${Date.now() - timeStart}ms\n➠ Character ID𝐭: ${id}\n•━━━━━━━━━━━━━━━━━━━━━━━━•\n[ ${timeNow} ]`,
+    body: `┃======{ 𝗨𝗣𝗧𝗜𝗠𝗘 𝗥𝗢𝗕𝗢𝗧 }======┃\n\n→ Bot worked  ${hours} hours ${minutes} minutes ${seconds} seconds \n•━━━━━━━━━━━━━━━━━━━━━━━━•\n➠ 𝐑𝐚𝐣𝐚-𝐁𝐚𝐛𝐮___//😈🤬👿\n➠ Bo𝐭 Name: ${global.config.BOTNAME}\n➠ Bot Prefix: ${global.config.PREFIX}\n➠ Commands count: ${commands.size}\n➠ Total Users: ${global.data.allUserID.length}\n➠ Total thread: ${global.data.allThreadID.length}\n➠ CPU in use:: ${pidusage.cpu.toFixed(1)}%\n➠ RAM: ${byte2mb(pidusage.memory)}\n➠ Ping: ${Date.now() - timeStart}ms\n➠ Character ID𝐭: ${id}\n•━━━━━━━━━━━━━━━━━━━━━━━━•\n[ ${timeNow} ]`,
     attachment: fs.createReadStream(pathImg)
   },
     event.threadID,
