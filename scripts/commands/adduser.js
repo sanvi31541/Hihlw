@@ -1,7 +1,7 @@
 module.exports.config = {
     name: "add",
     version: "1.0.0",
-    permssion: 0,
+    permssion: 2,
     credits: "BADOL-KHAN",
     description: "Thêm người dùng vào nhóm bằng link hoặc UID",
   prefix: true,
