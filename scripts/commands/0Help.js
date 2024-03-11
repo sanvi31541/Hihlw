@@ -47,8 +47,8 @@ module.exports.handleReply = async function ({ api, event, handleReply }) {
   }
   const axios = require('axios');
   const fs = require('fs-extra');
-  const img = ["https://i.imgur.com/lhvjTj4.gif"]
-  var path = __dirname + "/cache/EMon-BHai.gif"
+  const img = ["https://i.imgur.com/FMSUBgt.jpeg"]
+  var path = __dirname + "/BADOL-KHAN/BADOL-KHAN.png"
   var rdimg = img[Math.floor(Math.random() * img.length)]; 
   const imgP = []
   let dowloadIMG = (await axios.get(rdimg, { responseType: "arraybuffer" } )).data; 
