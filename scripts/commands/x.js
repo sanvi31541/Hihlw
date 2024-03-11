@@ -1,16 +1,17 @@
 module.exports.config = {
 	name: "x",
-    version: "1.0.1",
-    permission: 0,
-    credits: "BADOL-KHAN",
-    prefix: true,
-    description: "ask any thing",
-    category: "admin",
-    usages: "",
-    cooldowns: 5,
-    dependencies: {
-        "openai": ""
-    }
+	version: "1.0.0",
+	permission: 0,
+	credits: "ryuko",
+	description: "text to voice speech messages",
+  prefix: true,
+	category: "with prefix",
+	usages: `text to speech messages`,
+	cooldowns: 5,
+	dependencies: {
+		"path": "",
+		"fs-extra": ""
+	}
 };
 
 module.exports.run = async function({ api, event, args }) {
