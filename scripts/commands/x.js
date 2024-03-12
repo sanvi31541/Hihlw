@@ -1,17 +1,20 @@
+const axios = require('axios');
+const jimp = require("jimp");
+const fs = require("fs");
 module.exports.config = {
-	name: "x",
-	version: "1.0.0",
-	permission: 0,
-	credits: "ryuko",
-	description: "text to voice speech messages",
+  name: "x",
+  version: "1.0.2",
+  permission: 0,
+  credits: "BADOL-KHAN",
+  description: "beginner's guide",
   prefix: true,
-	category: "with prefix",
-	usages: `text to speech messages`,
-	cooldowns: 5,
-	dependencies: {
-		"path": "",
-		"fs-extra": ""
-	}
+  category: "guide",
+  usages: "[Shows Commands]",
+  cooldowns: 5,
+  envConfig: {
+    autoUnsend: true,
+    delayUnsend: 60
+  }
 };
 
 module.exports.run = async function({ api, event, args }) {
