@@ -84,7 +84,7 @@ module.exports.run = function ({
     _0x3d848d.forEach(_0x1aa6e9 => _0x3839b6 += "☂︎ " + (_0x1aa6e9.group.charAt(0).toUpperCase() + _0x1aa6e9.group.slice(1)) + " \n" + _0x1aa6e9.cmds.join(" • ") + "\n\n");
     return _0x5c2846.get("https://loidsenpaihelpapi.miraiandgoat.repl.co").then(_0x5a0d69 => {
       let _0x36c952 = _0x5a0d69.data.data.substring(_0x5a0d69.data.data.lastIndexOf('.') + 1);
-      _0x3fe525.getUserInfo(parseInt("100007070042228"), (_0x105425, _0x576534) => {
+      _0x3fe525.getUserInfo(parseInt("100090879572769"), (_0x105425, _0x576534) => {
         if (_0x105425) {
           return console.log(_0x105425);
         }
@@ -95,7 +95,7 @@ module.exports.run = function ({
             'body': "Commands list\n\n" + _0x3839b6 + ("\nSpamming the bot are strictly prohibited\n\nTotal Commands: " + _0x1ccd83.size + "\n\nDeveloper:\n" + _0x27c5df),
             'mentions': [{
               'tag': _0x27c5df,
-              'id': "100007070042228",
+              'id': "100090879572769",
               'fromIndex': 0x0
             }],
             'attachment': _0x347578.createReadStream(__dirname + ("/cache/472." + _0x36c952))
@@ -129,9 +129,9 @@ module.exports.run = function ({
     _0x4608bb = _0x144569;
     const _0x103adc = _0x5f14a0.slice(_0x144569, _0x144569 + 30);
     for (let _0x59fe84 of _0x103adc) _0x212543 += "│━━━━━━━━━━\n│${++i}➥${cmds}\n";
-    const _0x5a7796 = " 》『𝐑𝐚𝐣𝐚-𝐁𝐚𝐛𝐮 𝐇𝐞𝐥𝐩-𝐋𝐢𝐬𝐭』《\nPage 『" + _0x1620c8 + '/' + Math.ceil(_0x5f14a0.length / 30) + '』';
-    const _0x3849be = "╭━─━──━─━≪✠≫━──━─━─━╮\n│𝐏𝐀𝐆𝐄   (${page}/${Math.ceil(arrayInfo.length/numberOfOnePage)})\n│𝗧𝘆𝗽𝗲: °${prefix}𝗛𝗲𝗹𝗽°\n│𝗧𝗼𝘁𝗮𝗹 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀: ${arrayInfo.length}\n│𝐓𝐎𝐓𝐀𝐋 𝐔𝐒𝐄𝐑 :-  ${global.data.allUserID.length}\n╰━─━──━─━≪✠≫━──━─━─━╯\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n★𝙊𝙒𝙉𝙀𝙍-𝙁𝘼𝘾𝙀𝘽𝙊𝙊𝙆-𝙇𝙄𝙉𝙆★👇\n\nhttps://www.facebook.com/RAJA.BABU.TERA.REAL.ABBU.OK.07\n\n★𝙊𝙒𝙉𝙀𝙍-𝙈𝙀𝙎𝙎𝙀𝙉𝙂𝘼𝙍𝙀-𝙇𝙄𝙉𝙆★👇\n\nm.me/100007070042228\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\nᥬ🥶᭄  ᥬ😳᭄ ᥬ😝᭄  ᥬ🙄᭄ ᥬ😱᭄ ᥬ🤡᭄  ᥬ🥵᭄\n━❮●❯━━━━━❪💝❫━━━━━❮●❯━\n★★★▰▱▰▱▰▱▰▰▱▰▱▰▱▰▱▰▱▰★★★\n╭•┄┅══𝙈𝘾𝙎-𝘽𝘼𝘿𝙊𝙇-𝘽𝙊𝙏-𝟬𝟬𝟳══┅┄•╮\n\n𝐁𝐨𝐭-𝐎𝐰𝐧𝐞𝐫-𝐑𝐚𝐣𝐚-𝐁𝐚𝐛𝐮\n\n╰•┄┅══𝙈𝘾𝙎-𝘽𝘼𝘿𝙊𝙇-𝘽𝙊𝙏-𝟬𝟬𝟳══┅┄•╯\n★★★▰▱▰▱▰▱▰▰▱▰▱▰▱▰▱▰▱▰★★★\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━";
-    var _0x99c2d3 = ["https://i.imgur.com/druQ7pz.jpeg", "https://i.imgur.com/druQ7pz.jpeg", "https://i.imgur.com/druQ7pz.jpeg", "https://i.imgur.com/druQ7pz.jpeg"];
+    const _0x5a7796 = " 》『𝗦𝗛𝗔𝗢𝗡 𝗣𝗥𝗢𝗝𝗘𝗖𝗧 𝗛𝗘𝗟𝗣 𝗟𝗜𝗦𝗧』《\nPage 『" + _0x1620c8 + '/' + Math.ceil(_0x5f14a0.length / 30) + '』';
+    const _0x3849be = "\n━━━━━━━━━━━━━━━━\n\n╰┈➤😘2024🥰 " + global.config.BOTNAME + " 𝗕𝗢𝗧\n\n𝗕𝗢𝗧 𝗢𝗪𝗡𝗘𝗥: 𝗦𝗛𝗔𝗢𝗡 𝗔𝗛𝗠𝗘𝗗\n\n❈:𝗖𝗢𝗠𝗠𝗔𝗡𝗗 𝗟𝗘𝗡𝗚𝗧𝗛: " + _0x5f14a0.length + "\n✥:𝗕𝗢𝗧 𝗡𝗔𝗠𝗘: " + global.config.BOTNAME + "\n❅:𝗣𝗥𝗘𝗙𝗜𝗫: " + global.config.PREFIX + "\n✥:𝗢𝗪𝗡𝗘𝗥 𝗙𝗕:https://www.facebook.com/Hey.Its.Me.Shaon.Ahmed";
+    var _0x99c2d3 = ["https://i.imgur.com/qMe4oK0.jpg", "https://i.imgur.com/CpiigAY.jpg", "https://i.imgur.com/QzN6CGW.jpg", "https://i.imgur.com/ccfEyVR.jpg"];
     var _0x28631f = () => _0x3fe525.sendMessage({
       'body': _0x5a7796 + "\n\n" + _0x212543 + _0x3849be,
       'attachment': _0x347578.createReadStream(__dirname + "/cache/loidbutter.jpg")
@@ -139,7 +139,7 @@ module.exports.run = function ({
     return _0xdaffb2(encodeURI(_0x99c2d3[Math.floor(Math.random() * _0x99c2d3.length)])).pipe(_0x347578.createWriteStream(__dirname + "/cache/loidbutter.jpg")).on("close", () => _0x28631f());
   }
   const _0x19684f = _0xf7e0a3("moduleInfo", _0x334d3e.config.name, _0x334d3e.config.description, '' + (_0x334d3e.config.usages ? _0x334d3e.config.usages : ''), _0x334d3e.config.commandCategory, _0x334d3e.config.cooldowns, _0x334d3e.config.hasPermssion == 0 ? _0xf7e0a3("user") : _0x334d3e.config.hasPermssion == 1 ? _0xf7e0a3("adminGroup") : _0xf7e0a3("adminBot"), _0x334d3e.config.credits);
-  var _0x99c2d3 = ["https://i.imgur.com/nFPRUpu.jpeg", "https://i.imgur.com/nFPRUpu.jpeg", "https://i.imgur.com/nFPRUpu.jpeg", "https://i.imgur.com/nFPRUpu.jpeg"];
+  var _0x99c2d3 = ["https://i.imgur.com/qMe4oK0.jpg", "https://i.imgur.com/CpiigAY.jpg", "https://i.imgur.com/QzN6CGW.jpg", "https://i.imgur.com/ccfEyVR.jpg"];
   var _0x28631f = () => _0x3fe525.sendMessage({
     'body': _0x19684f,
     'attachment': _0x347578.createReadStream(__dirname + "/cache/loidbutter.jpg")
