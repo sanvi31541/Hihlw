@@ -2,7 +2,7 @@ module.exports.config = {
  name: "antiout",
  eventType: ["log:unsubscribe"],
  version: "0.0.1",
- credits: "Nayan",
+ credits: "BADOL-KHAN",
  description: "Listen events"
 };
 
@@ -11,12 +11,12 @@ module.exports.run = async({ event, api, Threads, Users }) => {
  if (data.antiout == false) return;
  if (event.logMessageData.leftParticipantFbId == api.getCurrentUserID()) return;
  const name = global.data.userName.get(event.logMessageData.leftParticipantFbId) || await Users.getNameUser(event.logMessageData.leftParticipantFbId);
- const type = (event.author == event.logMessageData.leftParticipantFbId) ? "self-separation" : "being kicked by the administrator na pasikat";
+ const type = (event.author == event.logMessageData.leftParticipantFbId) ? "self-separation" : "⚠️প্রশাসকের দ্বারা লাথি মারা হচ্ছে⚠️";
  if (type == "self-separation") {
   api.addUserToGroup(event.logMessageData.leftParticipantFbId, event.threadID, (error, info) => {
    if (error) {
-    api.sendMessage(`Unable to re-add members ${name} to the group\n\n${name} blocked me or There is no Message option in the profile `, event.threadID)
-   } else api.sendMessage(`${name} 𝘀𝘁𝘂𝗽𝗶𝗱 𝘆𝗼𝘂 𝗵𝗮𝘃𝗲 𝗻𝗼 𝗲𝘀𝗰𝗮𝗽𝗲 𝗳𝗿𝗼𝗺 𝗵𝗲𝗿𝗲`, event.threadID);
+    api.sendMessage(`⚠️ নোলা মার্ক আইডি এড দেইনা গ্রুপে❌ ${name} \n\n${name} ⚠️আমাকে ব্লক করেছে অথবা প্রোফাইলে কোন মেসেজ অপশন নেই❌ `, event.threadID)
+   } else api.sendMessage(`${name} ⚠️বোকা তুমি এখান থেকে রেহাই পাবে না❌`, event.threadID);
   })
  }
 }
