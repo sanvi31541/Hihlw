@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "toilet2",
+  name: "toilet",
   version: "3.1.1",
   permssion: 0,
   prefix: true,
